@@ -24,7 +24,7 @@ npm start
 A browser window should automatically pop up at http://localhost:3000
 
 # Approach
-Prior to this project I had worked with React before, but never with API integration. After reading the project description I started by recognizing that I would need a component for the character cards. I looked to the Rick and Morty API to see what kind of information I could retrieve. Although not required, I chose to include an image in my character card to break up chunks of text and make the website more visually appealing. I was unfamiliar with Axios so I prompted ChatGPT for guidance on how to implement useState and useEffect. 
+Prior to this project I had worked with React before, but never with API integration. After reading the project description I started by recognizing that I would need a component for the character cards. I looked to the Rick and Morty API to see what kind of information I could retrieve. I then sketched a quick wireframe in a notebook to think about how I would arrange elements (character names, character details etc.). Although not required, I chose to include an image in my character card to break up chunks of text and make the website more visually appealing. I was unfamiliar with Axios so I prompted ChatGPT for guidance on how to implement useState and useEffect. 
 
 After building a basic card, I turned to App.js to see if I could make one card appear on my site. I planned to put many card components on the site, but I started my rendering just one as a sanity check. Once I could display one card, I continued by adding nine more, to make ten cards in total.
 
