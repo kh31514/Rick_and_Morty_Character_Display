@@ -13,6 +13,10 @@ Navigate to the project directory and install the required packages using npm
 cd my-app
 npm install
 ```
+If Axios is not already included in your package.json, you can install it with:
+```
+npm install axios
+```
 Run the app
 ```
 npm start
