@@ -43,13 +43,15 @@ const CharacterCard = ({ id }) => {
   const readableDate = date.toLocaleString('en-US', options);
 
   return (
-    <div>
-      <h3>{data?.name}</h3>
-      <h4>{data?.species}</h4>
+    <div className="card">
+      <h3 className="name">{data?.name}</h3>
+      <h4 className="species">{data?.species}</h4>
       <img src={data?.image}></img>
-      <p>Status: {data?.status}</p>
-      <p>Gender: {data?.gender}</p>
-      <p>Date Created: {readableDate}</p>
+      <div className="details">
+        <p><b>Status:</b> {data?.status}</p>
+        <p><b>Gender:</b> {data?.gender}</p>
+        <p><b>Date Created:</b> {readableDate}</p>
+      </div>
     </div>
   );
 };

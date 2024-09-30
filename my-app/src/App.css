@@ -1,0 +1,96 @@
+body {
+  background-color: #333333;
+  font-family: "Fredoka", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 40;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Permanent Marker", cursive;
+  font-size: 70px;
+  color: #1EA4A8;
+  -webkit-text-stroke: 1px #D5E968;
+  text-shadow: 10px 10px black;
+  margin: 0px;
+}
+
+.author {
+  text-align: center;
+  color: rgb(156, 156, 156);
+  margin: 0px;
+  font-weight: 40;
+  font-size: 30px;
+}
+
+.date {
+  text-align: center;
+  color: rgb(156, 156, 156);
+  margin: 0px;
+  font-weight: 40;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  width: 200px;
+  height: 70px;
+  border-radius: 10px;
+  font-size: 20px;
+  margin: 10px 20px;
+  background-color: #ebebeb;
+  cursor: pointer;
+}
+
+button:hover {
+  color: #1EA4A8;
+}
+
+.filter {
+  margin: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.filterStatus {
+  color: #ebebeb;
+  font-weight: 500;
+  margin: 0px;
+  margin-bottom: 10px;
+}
+
+input {
+  background-color: #1EA4A8;
+}
+
+.labels {
+  display: flex;
+  justify-content: space-evenly;
+  color: #ebebeb;
+}
+
+label {
+  font-size: 20px;
+}
+
+.cardHolder {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 30px 10px;
+}
+
+.error {
+  color: #ebebeb;
+  font-size: 50px;
+}

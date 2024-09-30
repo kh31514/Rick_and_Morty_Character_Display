@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 
 const initialCards = (() => {
   const cards = [];
-  for (let i = 50; i <= 70; i++) {
+  for (let i = 1; i <= 40; i++) {
     cards.push({ id: i }); // Push objects into the array
   }
   return cards; // Return the populated array
@@ -63,47 +63,55 @@ function App() {
   return (
     <>
       <h1>Rick and Morty Characters</h1>
-      <h2>Created by Katie Huntley</h2>
-      <h2>September 29th, 2024</h2>
-      <button onClick={sortCards}>Sort Alphabetically</button>
-      <button onClick={sortCardsByDate}>Sort by Date Created</button>
+      <h2 className='author'>Created by Katie Huntley</h2>
+      <h3 className='date'>September 29th, 2024</h3>
+      <div className='filter'>
+        <div className="buttons">
+          <button onClick={sortCards}>Sort Alphabetically</button>
+          <button onClick={sortCardsByDate}>Sort by Date Created</button>
+        </div>
 
-      <h3>Filter Characters by Status:</h3>
-      <label>
-        <input
-          type="checkbox"
-          name="alive"
-          checked={filters.alive}
-          onChange={handleFilterChange}
-        />
-        Alive
-      </label>
-      <label>
-        <input
-          type="checkbox"
-          name="dead"
-          checked={filters.dead}
-          onChange={handleFilterChange}
-        />
-        Dead
-      </label>
-      <label>
-        <input
-          type="checkbox"
-          name="unknown"
-          checked={filters.unknown}
-          onChange={handleFilterChange}
-        />
-        Unknown
-      </label>
+        <div>
+          <h2 className='filterStatus'>Filter Characters by Status:</h2>
+          <div className='labels'>
+            <label>
+              <input
+                type="checkbox"
+                name="alive"
+                checked={filters.alive}
+                onChange={handleFilterChange}
+              />
+              Alive
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                name="dead"
+                checked={filters.dead}
+                onChange={handleFilterChange}
+              />
+              Dead
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                name="unknown"
+                checked={filters.unknown}
+                onChange={handleFilterChange}
+              />
+              Unknown
+            </label>
+          </div>
+        </div>
+      </div>
 
-      <div>
+      <div className='cardHolder'>
         {filteredCharacters.length > 0 ? (
           filteredCharacters.map(character => (
             <CharacterCard key={character.id} id={character.id} />
           ))
         ) : (
-          <p>No characters found.</p> // Message when no characters match the filter
+          <p className='error'>No characters found</p> // Message when no characters match the filter
         )}
       </div>
     </>
